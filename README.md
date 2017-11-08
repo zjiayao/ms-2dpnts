@@ -30,10 +30,10 @@ The mean shift algorithm seeks the cluster modes:
 
 ![modes](examples/four_gauss_modes.png)
 
-Pruning those modes (DFS in implmentation) yields
+Pruning those modes (DFS in implementation) yields
 the desired result.
 
-![clsuters](examples/four_gauss_cluster.png)
+![clusters](examples/four_gauss_cluster.png)
 
 An overlay of the clusters and their modes:
 
