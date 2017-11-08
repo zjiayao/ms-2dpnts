@@ -15,13 +15,16 @@ Four kernels are provided for density estimation, namely,
 Gaussian kernel, linear kernel and Epanechnikov kernel.
 The bandwidth is adjustable.
 
+Plotters in `R` and `Python` are also included in `cluster/`
+for data visualization.
+
 ## Example: Four Separable Gaussian
 
 Data are contained in `examples/four_gauss`, which
 are generated from four Gaussian distribution with same
 standard deviation.
 
-![raw](examples/four_gauss_raw.png)
+![raw](examples/four_gauss.png)
 
 The mean shift algorithm seeks the cluster modes:
 
@@ -30,7 +33,7 @@ The mean shift algorithm seeks the cluster modes:
 Pruning those modes (DFS in implmentation) yields
 the desired result.
 
-![clsuters](examples/four_gauss.png)
+![clsuters](examples/four_gauss_cluster.png)
 
 An overlay of the clusters and their modes:
 
