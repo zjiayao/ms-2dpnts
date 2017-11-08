@@ -21,15 +21,19 @@ Data are contained in `examples/four_gauss`, which
 are generated from four Gaussian distribution with same
 standard deviation.
 
-![raw](examples/four_gauss_raw.eps)
+![raw](examples/four_gauss_raw.png)
 
 The mean shift algorithm seeks the cluster modes:
 
-![modes](examples/four_gauss_modes.eps)
+![modes](examples/four_gauss_modes.png)
 
 Pruning those modes (DFS in implmentation) yields
 the desired result.
 
-![clsuters](examples/four_gauss.eps)
+![clsuters](examples/four_gauss.png)
+
+An overlay of the clusters and their modes:
+
+![overlay](examples/four_gauss_overlay.png)
 
 
