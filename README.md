@@ -1,17 +1,35 @@
-# ms-2dpnts
+# 2D Mean Shift Example
+
 Clustering 2D Points using Mean Shift
 
-## Usage
-``` make sim1 ``` to run the simulation
+## Usage and Features
 
-## Script Format
-* ```inp```
-Used to generate normally distributed points
-Each line is formatted as $N, \mu_x, \mu_y, \sigma$ as ```%u %lf %lf %lf```
-The output is written to file ```oup```
-* ```script```
-Used to configure mean shift simulator
-Set kernel, bandwidth, and other parameters
+Issue `make ms` to build the main program.
+To enter the interactive mode, directly run `./ms`;
+scripts can be piped for automation purposes.
 
-## Notes
-```R``` is automatically called to plot the results.
+Data files are $x_1$, $x_2$ coordinates separated
+by space.
+
+Four kernels are provided for density estimation, namely,
+Gaussian kernel, linear kernel and Epanechnikov kernel.
+The bandwidth is adjustable.
+
+## Example: Four Separable Gaussian
+
+Data are contained in `examples/four_gauss`, which
+are generated from four Gaussian distribution with same
+standard deviation.
+
+![raw](examples/four_gauss_raw.eps)
+
+The mean shift algorithm seeks the cluster modes:
+
+![modes](examples/four_gauss_modes.eps)
+
+Pruning those modes (DFS in implmentation) yields
+the desired result.
+
+![clsuters](examples/four_gauss.eps)
+
+
