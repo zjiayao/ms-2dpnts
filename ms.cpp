@@ -1,9 +1,9 @@
 //////////////////////////////////
-//			Mean Shift 			//	
-// 	For 2D points clustering	//
-// 								//
-// 	(C) 2017 Jiayao Zhang		//
-// 		v0.1 27-Apr-2017		//
+//          Mean Shift          //
+//  For 2D points clustering    //
+//                              //
+//  (C) 2017 Jiayao Zhang       //
+//      v0.1 27-Apr-2017        //
 //////////////////////////////////
 // ms.cpp
 #include <cstdio>

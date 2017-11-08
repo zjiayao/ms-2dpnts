@@ -1,9 +1,9 @@
 //////////////////////////////////
-//		Kernel Library			//	
-// 	Commonly used kernels		//
-// 								//
-// 	(C) 2017 Jiayao Zhang		//
-// 		v0.1 27-Apr-2017		//
+//          Kernel Library      //
+//      Commonly used kernels   //
+//                              //
+//      (C) 2017 Jiayao Zhang   //
+//          v0.1 27-Apr-2017    //
 //////////////////////////////////
 // kernel.cpp
 #include <cassert>

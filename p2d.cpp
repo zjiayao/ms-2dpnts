@@ -1,9 +1,9 @@
 //////////////////////////////////
-//		2D Point Class 			//	
-// 	  Modelling 2D Points		//
-// 								//
-// 	(C) 2017 Jiayao Zhang		//
-// 		v0.1 27-Apr-2017		//
+//          2D Point Class      //
+//      Modelling 2D Points     //
+//                              //
+//      (C) 2017 Jiayao Zhang   //
+//          0.1 27-Apr-2017     //
 //////////////////////////////////
 // p2d.cpp
 #include "p2d.h"
