@@ -19,10 +19,12 @@ Tutorial and discussion mean shift is available at
 [Jiayao's
 blog](https://zjiayao.github.io/blog/2017/mean-shift-2d://zjiayao.github.io/blog/2017/mean-shift-2d/).
 
-## Installation
+## Dependency
 
-**Note**: The main program does not have any dependency. However, to
-use the `python` plotter, `matplotlib` is required. To install,
+This implementation depends on the "[Approxiamted Nearest Neighobor (ANN) Library](https://www.cs.umd.edu/~mount/ANN/)" for better performance in filtering shift vectors. ANN
+can be installed form the link above.
+
+`Python` plotter also requires `matplotlib`. To install it,
 one may use
 
     pip install matplotlib
@@ -32,6 +34,10 @@ through `pip` or
     conda install matplotlib
 
 through `anaconda`.
+
+
+
+## Installation
 
 First clone this repo:
 

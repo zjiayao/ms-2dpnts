@@ -3,5 +3,8 @@ complier:
     - clang
     - gcc
 script:
+    - wget "https://www.cs.umd.edu/~mount/ANN/Files/1.1.2/ann_1.1.2.zip"
+    - unzip ./ann_1.1.2.zip
+    - make linus-g++
     - make ms
     - make example
