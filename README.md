@@ -14,7 +14,7 @@ of applying a intricate but not very popular clustering algorithm,
 *mean shift*.
 
 Tutorial and discussion mean shift is available at
-[Johnson's
+[Jiayao's
 blog](https://zjiayao.github.io/blog/2017/mean-shift-2d://zjiayao.github.io/blog/2017/mean-shift-2d/).
 
 ## Installation
