@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 import glob
@@ -8,7 +7,7 @@ OUTPUT = os.path.join(FWD, 'oup')
 MODES = os.path.join(FWD, 'ms_modes')
 
 
-def plot_data(files, xlabel=r'$x_1$', ylabel=r'$x_2$', headers=None, seps=None):
+def plot_data(files, xlabel=r'$x_1$', ylabel=r'$x_2$', headers=None, seps=None, block=False):
 	fig = plt.figure()
 	for i, datafile in enumerate(files):
 		X = []
@@ -25,12 +24,13 @@ def plot_data(files, xlabel=r'$x_1$', ylabel=r'$x_2$', headers=None, seps=None):
 	plt.xlabel(r'$x_1$', fontsize=16)
 	plt.ylabel(r'$x_2$', fontsize=16)
 	plt.legend()
-	plt.show(block=0)
+	plt.show(block=block)
 
 if __name__ == '__main__':
 	plot_data([OUTPUT])
 	plot_data([MODES])
-	plot_data(glob.glob(os.path.join(FWD, 'cluster_[0-9]*')))
+	clusters = glob.glob(os.path.join(FWD, 'cluster_[0-9]*'))
+	plot_data(clusters, headers=[True] * len(clusters), seps=[','] * len((clusters)), block=True)
 
 
 
