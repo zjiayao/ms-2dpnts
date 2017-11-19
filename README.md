@@ -1,22 +1,140 @@
-# 2D Mean Shift Example
+# 2D Mean Shift
 
-Clustering 2D Points using Mean Shift
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/zjiayao/ms-2dpnts/blob/master/LICENSE)
+[![Chat on Gitter](https://badges.gitter.im/zjiayao/pyTracer.svg)](https://gitter.im/zjiayao/jmt/)
+
+*Clustering 2D Points with Mean Shift*
+
+## Introduction
+
+One fundamental question unsupervised learning is to address
+is *clustering*. Learning the structural information embedded
+in the data. This repo serves as a complementary example
+of applying a intricate but not very popular clustering algorithm,
+*mean shift*.
+
+Tutorial and discussion mean shift is available at
+[Johnson's
+blog](https://zjiayao.github.io/blog/2017/mean-shift-2d://zjiayao.github.io/blog/2017/mean-shift-2d/).
+
+## Installation
+
+**Note**: The main program does not have any dependency. However, to
+use the `python` plotter, `matplotlib` is required. To install,
+one may use
+
+    pip install matplotlib
+
+through `pip` or
+
+    conda install matplotlib
+
+through `anaconda`.
+
+First clone this repo:
+
+    git clone https://github.com/zjiayao/ms-2dpnts
+
+We may proceed to build the main program `ms`:
+
+    make ms
+
+That's it, run it to enter interactive mode,
+or pipe into a aggregated script such as:
+
+    ./ms < script
 
 ## Usage and Features
 
-Issue `make ms` to build the main program.
-To enter the interactive mode, directly run `./ms`;
-scripts can be piped for automation purposes.
+### Prepare Data
 
-Data files are $x_1$, $x_2$ coordinates separated
-by space.
+Data files are to be served as the source to the
+main program. Data files are space-separated
+2D coordinates. When running the program,
+it first prompts for the data:
 
+    data file:
+    >
+
+### Kernels
+
+Afterwards, one may specify the kernel smoother
+used in the algorithm.
 Four kernels are provided for density estimation, namely,
 Gaussian kernel, linear kernel and Epanechnikov kernel.
 The bandwidth is adjustable.
 
+    > gauss
+    Data read successfully from "gauss"
+    Select kernel:
+    [1] Uniform
+    [2] Gauss
+    [3] Epanechnikov
+
+### Custom Parameters
+
+After kernel selection, one may further specify the
+parameters used, this generally includes
+
+- Global Bandwidth
+
+The bandwidth parameter `h` used to specify the activate window.
+
+- Maximum Iterations
+
+The maximum number of iterations seeking the shift vector, default is
+50.
+
+- Convergence Criterion
+
+Stopping criterion for mode convergence. By default 0.0001.
+
+- Mode Pruning Criterion
+
+This is problem dependent, it is recommended to set this criterion
+larger than the window width (why?). This is especially handy
+when running mean shift for several epoches.
+
+### Gathering Result
+
+Thereafter, we may enter the mean shift loop, upon completion, a short
+summary is displayed, for example:
+
+    Mean shift started with:
+    	Kernel: Gauss
+    	Bandwidth: 16
+    	Max. Iteration: 50
+    	Convergence Toleration: 0.00001000
+    	Mode Pruning Diameter: 18.000
+    Clustering completed:
+    	Clusters: 4
+    	Time Elpased: 0.539 sec
+    	Avg. Iteration: 34.446
+    	[1] View Result and Exit
+    	[2] Save Result and Exit
+    	[3] Exit
+
+    >
+
+Issue `1` to inspect results; `2` to save results to `cluster/`
+folder; `3` to abandon results.
+
+### Plotter
+
 Plotters in `R` and `Python` are also included in `cluster/`
-for data visualization.
+for data visualization. To use `R` plotter, one may issue
+
+    cd cluster
+    Rscript plot.r
+
+The results are automatically saved to `cluster/Rplots.pdf`.
+
+To use `Python` plotter, at the root directory, one may invoke the script
+via:
+
+    python cluster/plot.py
+
+The results are plotted on air using `matplotlib`.
 
 ## Example: Four Separable Gaussian
 
