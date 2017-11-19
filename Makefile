@@ -1,6 +1,6 @@
 c++ = g++
 dependency = ms.cpp p2d.o kernel.o
-ann = /usr/local/share/ann/ann_1.1.2
+ann = ann
 flags = -O2 -Wall -std=c++11
 comp_only = -c
 lib_ann = -I$(ann)/include -L$(ann)/lib -lANN

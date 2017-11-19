@@ -7,6 +7,7 @@ script:
     - unzip ./ann_1.1.2.zip
     - cd ann_1.1.2
     - make linux-g++
+    - mv ann_1.1.2 ann
     - cd ..
     - make ms
     - make example
