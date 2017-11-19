@@ -7,6 +7,7 @@
 //////////////////////////////////
 // kernel.cpp
 #include <cassert>
+#include <cmath>
 #include "kernel.h"
 
 double kernel::gauss(unsigned argc, double *argv, double val)
@@ -19,11 +20,13 @@ double kernel::gauss(unsigned argc, double *argv, double val)
 double kernel::uniform(unsigned argc, double *argv, double val)
 {
 	assert(argc == 0);
-	return (val >= -1 && val <= 1) ? 1.0 : 0.0;
+	val = sqrt(fabs(val));
+	return val <= 1.0 ? 1.0 : 0.0;
 }
 
 double kernel::epanechnikov(unsigned argc, double *argv, double val)
 {
 	assert(argc == 0);
-	return (val >= -1 && val <= 1) ? (0.75 * (1 - val)) : 0.0;
+	val = sqrt(fabs(val));
+	return val <= 1.0 ? (0.75 * (1 - val)) : 0.0;
 }

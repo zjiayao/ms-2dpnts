@@ -330,7 +330,7 @@ int main(int argc, char **argv)
 
 
 	/* post-process */
-	printf("Clustering completed:\n\tClusters: %lu\n\tTime Elpased: %.3f sec\n\tAvg. Epoch: %.3f\n", 
+	printf("Clustering completed:\n\tClusters: %lu\n\tTime Elpased: %.3f sec\n\tAvg. Iteration: %.3f\n", 
 			clusters.size(), (float)(ms_time) / CLOCKS_PER_SEC, double(epoch_stat) / points.size() - 1);
 	if(interactive)
 	{
