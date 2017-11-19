@@ -119,6 +119,13 @@ summary is displayed, for example:
 Issue `1` to inspect results; `2` to save results to `cluster/`
 folder; `3` to abandon results.
 
+Under choices `1` and `2`, a `log` file is created in the root directory
+containing the coordinates of all modes. Under `2`,
+different clsuters are written to `cluster/clsuter_?`
+where `?` stands for cluster index. Each file is in
+`csv` format with header.
+
+
 ### Plotter
 
 Plotters in `R` and `Python` are also included in `cluster/`
@@ -135,6 +142,20 @@ via:
     python cluster/plot.py
 
 The results are plotted on air using `matplotlib`.
+
+
+### Automation Script
+
+A sample script file is provided in `examples/script`
+for automation the inputting process. The `script`
+is later prepared by `examples/sciprt.sh` for
+main program to read. To run under automation mode,
+one may:
+
+    make example
+
+In essense, this amounts to cut the `script` by
+colons, the feed it directly to `stdin`.
 
 ## Example: Four Separable Gaussian
 
