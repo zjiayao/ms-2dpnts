@@ -19,7 +19,7 @@ of applying a intricate but not very popular clustering algorithm,
 
 Tutorial and discussion mean shift is available at
 [Jiayao's
-blog](https://zjiayao.github.io/blog/2017/mean-shift-2d://zjiayao.github.io/blog/2017/mean-shift-2d/).
+blog](https://zjiayao.github.io/blog/2017/mean-shift-2d/).
 
 ## Dependency
 
