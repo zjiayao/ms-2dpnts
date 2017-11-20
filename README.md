@@ -3,9 +3,11 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/zjiayao/ms-2dpnts/blob/master/LICENSE)
 [![Travis_status](https://travis-ci.org/zjiayao/ms-2dpnts.svg?branch=maste://travis-ci.org/zjiayao/ms-2dpnts.svg?branch=master)](https://travis-ci.org/zjiayao/jmt-matrix)
 [![Chat on Gitter](https://badges.gitter.im/zjiayao/pyTracer.svg)](https://gitter.im/zjiayao/jmt/)
+
 *Clustering 2D Points with Mean Shift*
 
-![title](examples/four_gauss_overlay.png)
+![title](examples/demo.gif)
+
 
 ## Introduction
 
@@ -53,6 +55,8 @@ or pipe into a aggregated script such as:
     ./ms < script
 
 ## Usage and Features
+
+![title](examples/four_gauss_overlay.png)
 
 ### Prepare Data
 
